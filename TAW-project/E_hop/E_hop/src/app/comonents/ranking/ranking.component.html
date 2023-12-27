@@ -1,0 +1,11 @@
+<div>
+  <button *ngIf="this.userCurrent.role == 'admin'" (click)="reset()">Reset all</button>
+<div  *ngFor="let c of data | orderBy" >
+<div style="color: white">
+  {{c.fullname}}
+  <p>score: {{c.score}}</p>
+  <button *ngIf="this.userCurrent.role == 'admin'" style="color: black" (click)="deleteUser(c.id)">Delete user {{c.fullname}}</button>
+</div>
+
+</div>
+</div>
